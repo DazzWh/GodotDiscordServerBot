@@ -7,8 +7,9 @@ namespace GodotDiscordBot.Services
 {
     public class MemeService
     {
-        private const string MemeListFile = "MemeList.txt";
         private const string MemeFolderPath = "Memes";
+        private const string MemeListFileName = "MemeList.txt";
+        private readonly string _memeListFilePath = $"{MemeFolderPath}/{MemeListFileName}"; 
         
         private readonly Dictionary<string, string> _memes= new Dictionary<string, string>();
         private readonly Random _rnd;
@@ -32,13 +33,13 @@ namespace GodotDiscordBot.Services
 
         private void LoadMemes()
         {
-            if (!File.Exists(MemeListFile))
+            if (!File.Exists(_memeListFilePath))
             {
                 // Todo: log error here
                 return;
             }
 
-            var lines = File.ReadAllLines(MemeListFile);
+            var lines = File.ReadAllLines(_memeListFilePath);
             foreach (var line in lines)
             {
                 // File Line Format:

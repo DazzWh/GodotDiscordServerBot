@@ -12,11 +12,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="MemeList.txt">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
         <Content Include="memes\**">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Update="memes\MemeList.txt">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
 </Project>
