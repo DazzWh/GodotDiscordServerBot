@@ -1,0 +1,3 @@
+﻿<config>
+    <DiscordToken></DiscordToken> <!-- Have the discord bot token as this value, or as an environment variable -->
+</config>

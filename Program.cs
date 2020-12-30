@@ -5,6 +5,7 @@ using Discord.Commands;
 using Discord.WebSocket;
 using GodotDiscordBot.Modules;
 using GodotDiscordBot.Services;
+using GodotDiscordBot.Services.Config;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace GodotDiscordBot
@@ -34,6 +35,7 @@ namespace GodotDiscordBot
             }))
             
             .AddSingleton<LoggingService>()
+            .AddSingleton<BotConfigurationService>()
             .AddSingleton<Random>()
             .AddSingleton<SimpleLinksModule>()
             .AddSingleton<SimpleBotCommandsModule>()

@@ -8,12 +8,14 @@ Originally by [Calinou](https://github.com/Calinou/datcord_bot), moved to a more
 
 #### For V1:
 + [ ] Complete parity with previous version (minus role management)
++ [ ] !tut (a consolidation of other tutorial links)
++ [ ] Auto add an emoji to showcase entries
 + [ ] Class names bikeshedded into making sense
 + [ ] Modules content split into readable structure
 + [ ] Memes implementation discussed 
     - [ ] Do we need memes?
     - [ ] Do we need to store images in the repo?
-+ [ ] Discord token optionally read from a file in the executed folder, not from environment variable
++ [x] Discord token optionally read from a file in the executed folder, not from environment variable
 + [ ] Publish instructions written, or cross platform build settings saved in repo
 
 ---
