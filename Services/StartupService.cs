@@ -14,6 +14,7 @@ namespace GodotDiscordBot.Services
         private readonly CommandHandler _commandHandler;
         private readonly MemeService _memeService;
         private readonly ShowcaseSupportService _showcaseSupportService;
+        private readonly AcceptRulesService _acceptRulesService;
 
         public StartupService(
             DiscordSocketClient discord,
@@ -21,6 +22,7 @@ namespace GodotDiscordBot.Services
             BotConfigurationService configService,
             CommandHandler commandHandler,
             MemeService memeService,
+            AcceptRulesService acceptRulesService,
             ShowcaseSupportService showcaseSupportService)
         {
             _client = discord;
@@ -29,6 +31,7 @@ namespace GodotDiscordBot.Services
             _commandHandler = commandHandler;
             _memeService = memeService;
             _showcaseSupportService = showcaseSupportService;
+            _acceptRulesService = acceptRulesService;
         }
 
         public async Task StartAsync()
@@ -37,9 +40,10 @@ namespace GodotDiscordBot.Services
             _configService.Initialize();
             _memeService.Initialize();
             _showcaseSupportService.Initialize();
+            _acceptRulesService.Initialize();
 
             await _client.LoginAsync(TokenType.Bot,
-            Environment.GetEnvironmentVariable("DiscordTokenGodot") ?? _configService.GetDiscordToken());
+            Environment.GetEnvironmentVariable("DiscordTokenGodot") ?? _configService.Current.DiscordToken);
             await _client.StartAsync();
 
             await _commandHandler.Initialize();

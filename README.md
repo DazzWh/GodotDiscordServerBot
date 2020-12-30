@@ -9,7 +9,7 @@ Originally by [Calinou](https://github.com/Calinou/datcord_bot), moved to a more
 #### For V1:
 + [ ] Complete parity with previous version (minus role management)
 + [ ] !tut (a consolidation of other tutorial links)
-+ [ ] Auto add an emoji to showcase entries
++ [x] Auto add an emoji to showcase entries
 + [ ] Class names bikeshedded into making sense
 + [ ] Modules content split into readable structure
 + [ ] Memes implementation discussed 

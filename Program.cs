@@ -40,6 +40,7 @@ namespace GodotDiscordBot
             .AddSingleton<SimpleBotCommandsModule>()
             .AddSingleton<CommandHandler>()
             .AddSingleton<BotConfigurationService>()
+            .AddSingleton<AcceptRulesService>()
             .AddSingleton<ShowcaseSupportService>()
             .AddSingleton<MemeService>()
             .AddSingleton<StartupService>()

@@ -1,5 +1,10 @@
 ﻿<config>
-    <DiscordToken>NzYzNDgyODMxOTIxODcyOTc3.X34Wyw.lfVm9saUeCe3RelJVs8ec4M7eYg</DiscordToken> <!-- Have the discord bot token as this value, or as an environment variable -->
-    <ShowcaseChannelID>793838699460296714</ShowcaseChannelID> <!-- For adding a supportive reaction to the entries -->
-    <ShowcaseAutoEmote>:testimage:793838829068484618</ShowcaseAutoEmote> <!-- :emoteName:number -->
+    <DiscordToken>BotTokenGoesHere</DiscordToken> <!-- Have the discord bot token as this value, or as an environment variable -->
+    
+    <ShowcaseChannelId>793838699460296714</ShowcaseChannelId> <!-- For adding a supportive reaction to the entries -->
+    <ShowcaseAutoEmote>:gdhearteyes:793847681533214720</ShowcaseAutoEmote> <!-- :emoteName:number -->
+    
+    <RulesMessageId>793847958792699934</RulesMessageId> <!-- The message that people need to hit an emote on to "accept the rules" -->  
+    <RulesAcceptedEmoteName>godot</RulesAcceptedEmoteName> <!-- The emote to "accept the rules" -->
+    <RulesAcceptedRoleId>793855404512641035</RulesAcceptedRoleId>
 </config>

@@ -28,8 +28,8 @@ namespace GodotDiscordBot.Services
 
         private async Task HandleMessageReceived(SocketMessage message)
         {
-            if (message.Channel.Id.Equals(_config.GetShowcaseId()) &&
-                Emote.TryParse($"<{_config.GetShowcaseEmote()}>", out var emote))
+            if (message.Channel.Id.Equals(_config.Current.ShowcaseChannelId) &&
+                Emote.TryParse($"<{_config.Current.ShowcaseAutoEmoteName}>", out var emote))
             {
                 await message.AddReactionAsync(emote);
             }

@@ -9,17 +9,13 @@ namespace GodotDiscordBot.Services.Config
     public class BotConfigurationService
     {
         public event Func<LogMessage, Task> Log;
-        private BotConfiguration _config;
+        public BotConfiguration Current;
 
         public void Initialize()
         {
-            _config = LoadConfiguration();
+            Current = LoadConfiguration();
         }
-
-        public string GetDiscordToken() => _config.DiscordToken;
-        public ulong GetShowcaseId() => _config.ShowcaseChannelID;
-        public string GetShowcaseEmote() => _config.ShowcaseAutoEmote;
-
+        
         private BotConfiguration LoadConfiguration()
         {
             var config = new BotConfiguration(); 
