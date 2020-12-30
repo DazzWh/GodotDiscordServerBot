@@ -8,7 +8,6 @@ namespace GodotDiscordBot.Services.Config
 {
     public class BotConfigurationService
     {
-        
         public event Func<LogMessage, Task> Log;
         private BotConfiguration _config;
 
@@ -18,8 +17,10 @@ namespace GodotDiscordBot.Services.Config
         }
 
         public string GetDiscordToken() => _config.DiscordToken;
+        public ulong GetShowcaseId() => _config.ShowcaseChannelID;
+        public string GetShowcaseEmote() => _config.ShowcaseAutoEmote;
 
-        private static BotConfiguration LoadConfiguration()
+        private BotConfiguration LoadConfiguration()
         {
             var config = new BotConfiguration(); 
 
@@ -31,8 +32,7 @@ namespace GodotDiscordBot.Services.Config
             }
             catch (Exception e)
             {
-                // Todo: Log why this fails
-                // Log?.Invoke(new LogMessage(LogSeverity.Error, nameof(GameService), e.Message));
+                Log?.Invoke(new LogMessage(LogSeverity.Error, nameof(BotConfigurationService), e.Message));
             }
 
             return config;

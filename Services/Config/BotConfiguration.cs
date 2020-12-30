@@ -5,7 +5,8 @@ namespace GodotDiscordBot.Services.Config
     [XmlType("config")]
     public class BotConfiguration
     {
-        [XmlElement("DiscordToken")]
-        public string DiscordToken = string.Empty;
+        [XmlElement("DiscordToken")] public string DiscordToken = string.Empty;
+        [XmlElement("ShowcaseChannelID")] public ulong ShowcaseChannelID = 0;
+        [XmlElement("ShowcaseAutoEmote")] public string ShowcaseAutoEmote = string.Empty;
     }
 }

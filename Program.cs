@@ -35,12 +35,13 @@ namespace GodotDiscordBot
             }))
             
             .AddSingleton<LoggingService>()
-            .AddSingleton<BotConfigurationService>()
             .AddSingleton<Random>()
             .AddSingleton<SimpleLinksModule>()
             .AddSingleton<SimpleBotCommandsModule>()
-            .AddSingleton<MemeService>()
             .AddSingleton<CommandHandler>()
+            .AddSingleton<BotConfigurationService>()
+            .AddSingleton<ShowcaseSupportService>()
+            .AddSingleton<MemeService>()
             .AddSingleton<StartupService>()
             .BuildServiceProvider();
     }

@@ -1,3 +1,5 @@
 ﻿<config>
-    <DiscordToken></DiscordToken> <!-- Have the discord bot token as this value, or as an environment variable -->
+    <DiscordToken>NzYzNDgyODMxOTIxODcyOTc3.X34Wyw.lfVm9saUeCe3RelJVs8ec4M7eYg</DiscordToken> <!-- Have the discord bot token as this value, or as an environment variable -->
+    <ShowcaseChannelID>793838699460296714</ShowcaseChannelID> <!-- For adding a supportive reaction to the entries -->
+    <ShowcaseAutoEmote>:testimage:793838829068484618</ShowcaseAutoEmote> <!-- :emoteName:number -->
 </config>
