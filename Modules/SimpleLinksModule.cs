@@ -102,6 +102,21 @@ namespace GodotDiscordBot.Modules
         [Command("pronounce")]
         [Summary("How to pronounce the word 'Godot'")]
         public async Task Pronounce() => await ReplyAsync("Godot is usually pronounced \"go-dough\" (the \"t\" is silent).");
-        
+
+        [Command("pronouns")]
+        [Summary("Stance on pronouns in names")]
+        public async Task Pronouns() => await ReplyAsync(
+            @"
+            ```
+            Pronouns: Everyone's got 'em!
+            In this server everyone is expected to respect other people's pronouns. You will not be banned for occasional mistakes, but continuous and intentional misgendering of people is not acceptable at all and will be treated as harassment.
+
+            If you're genuinely interested to know more about this, there are some resources online that will help.
+            You can start by reading this website https://www.mypronouns.org/ or watching this video https://www.youtube.com/watch?v=9bbINLWtMKI
+
+            For any further question, feel free to send a DM to @_MODS_PM_
+            ```"
+        );
+
     }
 }
